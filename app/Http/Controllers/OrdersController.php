@@ -13,7 +13,9 @@ class OrdersController extends Controller
      */
     public function index()
     {
-        //
+        $orders = Order::paginate(15);
+
+        return OrderResource::collection($orders);
     }
 
     /**
@@ -24,7 +26,11 @@ class OrdersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $order = new Order;
+
+        if ($order->save()) {
+            return new OrderResource($order);
+        }
     }
 
     /**
@@ -35,6 +41,10 @@ class OrdersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $order = Order::findOrFail($id);
+
+        if ($order->delete()) {
+            return new OrderResource($order);
+        }
     }
 }
