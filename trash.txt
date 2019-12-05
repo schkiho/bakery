@@ -1,0 +1,12 @@
+<div class="row border d-flex align-items-end">
+        <div class="col w-25 d-flex justify-content-end align-items-start">
+          <window class="left" />
+        </div>
+        <div class="col w-25 border vh-50 d-flex justify-content-center align-items-end">
+          <door />
+        </div>
+        <div class="col w-25">
+          <window class="right" />
+          <mailbox />
+        </div>
+      </div>

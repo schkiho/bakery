@@ -16,7 +16,7 @@ class OrdersController extends Controller
      */
     public function index()
     {
-        $orders = Order::paginate(15);
+        $orders = Order::orderby('created_at','desc')->paginate(15);
 
         return OrderResource::collection($orders);
     }

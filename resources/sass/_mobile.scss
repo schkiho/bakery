@@ -1,0 +1,23 @@
+@include mediaSm {
+    .text{
+        font-size: 0.5rem;
+    }
+}
+
+@include mediaMd {
+    .text{
+        font-size: 0.8rem;
+    }
+}
+
+@include mediaLg {
+    .text{
+        font-size: 1rem;
+    }
+}
+
+@include mediaXl {
+    .text{
+        font-size: 1.5rem;
+    }
+}
