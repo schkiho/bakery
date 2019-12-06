@@ -7,18 +7,20 @@ export default {
   name: "sun",
   data() {
     return {
-      darkmode: false
+      dayMode: false
     };
   },
-  method: {
-    swithMode() {
-      if (this.darkmode === false) {
-        this.darkmode = true;
-        console.log(this.darkmode);
-      } else {
-        this.darkmode = !this.darkmode;
-      }
+  props: {
+    nightMode: { type: Boolean }
+  },
+
+  methods: {
+    switchMode() {
+      this.$emit("clicked", this.dayMode);
     }
+  },
+  beforeMount() {
+    this.dayMode = !this.nightMode;
   }
 };
 </script>

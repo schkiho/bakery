@@ -1,20 +1,20 @@
 <template>
-  <div class="house">    
+  <div class="house">
     <div class="container frontage w-100 h-100">
       <div class="left d-flex justify-content-center">
-        <window />
+        <window :nightMode="nightMode" />
       </div>
       <div class="middl-up d-flex justify-content-center">
         <sign />
       </div>
       <div class="middle-down d-flex justify-content-center align-items-end">
-        <door />
+        <door :nightMode="nightMode" />
       </div>
       <div class="right-up d-flex justify-content-center">
-        <window />
+        <window :nightMode="nightMode" />
       </div>
       <div class="right-down d-flex justify-content-center align-items-center">
-        <mailbox />
+        <mailbox :nightMode="nightMode" />
       </div>
     </div>
   </div>
@@ -28,6 +28,9 @@ import mailbox from "./mailbox";
 
 export default {
   name: "house",
+  props: {
+    nightMode: { type: Boolean }
+  },
   components: {
     window,
     sign,
@@ -58,14 +61,14 @@ export default {
   grid-row: 1/2;
 }
 
-.middle-up{
-    grid-column: 2/3;
-  grid-row: 1/2;  
+.middle-up {
+  grid-column: 2/3;
+  grid-row: 1/2;
 }
 
 .middle-down {
   grid-column: 2/3;
-  grid-row: 2/3;  
+  grid-row: 2/3;
 }
 
 .right-up {

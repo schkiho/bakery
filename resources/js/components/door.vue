@@ -15,18 +15,22 @@ export default {
       }
     };
   },
-
+  props: {
+    nightMode: { type: Boolean }
+  },
   methods: {
     addOrder() {
-      fetch("api/order", {
-        method: "post",
-        body: JSON.stringify(this.order),
-        headers: {
-          "content-type": "application/json"
-        }
-      })
-        .then(res => res.json())
-        .catch(err => console.log(err));
+      if (!this.nightMode) {
+        fetch("api/order", {
+          method: "post",
+          body: JSON.stringify(this.order),
+          headers: {
+            "content-type": "application/json"
+          }
+        })
+          .then(res => res.json())
+          .catch(err => console.log(err));
+      }
     }
   }
 };
@@ -35,7 +39,7 @@ export default {
 <style scoped>
 .door {
   width: 10vw;
-  height: 155px;
+  height: 25vh;
   background: #ce8e83;
   border: 1px solid transparent;
   overflow: hidden;

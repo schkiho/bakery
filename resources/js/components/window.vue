@@ -1,7 +1,7 @@
 <template>
   <div
     class="window mt-5"
-    @mouseover="hover = true"
+    @mouseover="inactive"
     @mouseleave="hover = false"
     :class="{ active: hover }"
   ></div>
@@ -13,6 +13,16 @@ export default {
     return {
       hover: false
     };
+  },
+  props: {
+    nightMode: { type: Boolean }
+  },
+  methods: {
+    inactive() {
+      if (!this.nightMode) {
+        this.hover = true;
+      }
+    }
   }
 };
 </script>
