@@ -35,6 +35,7 @@ export default {
   border-radius: 50%;
   background: #00f7ff;
   border: 3px solid #00008b;
+  cursor: pointer;
 }
 
 .active {

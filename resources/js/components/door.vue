@@ -44,6 +44,7 @@ export default {
   border: 1px solid transparent;
   overflow: hidden;
   border: 1px solid transparent;
+  cursor: pointer;
 }
 
 .handle {

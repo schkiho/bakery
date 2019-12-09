@@ -27,5 +27,6 @@ export default {
   height: 10vw;
   border-radius: 50%;
   background: #ffff00;
+  cursor: pointer;
 }
 </style>

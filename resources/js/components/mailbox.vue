@@ -38,6 +38,7 @@ export default {
   width: 10vw;
   height: 8vh;
   background: #444;
+  cursor: pointer;
 }
 
 .mailslot {
