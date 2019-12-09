@@ -15,11 +15,11 @@ export default {
     };
   },
   props: {
-    nightMode: { type: Boolean }
+    nightmode: { type: Boolean }
   },
   methods: {
     inactive() {
-      if (!this.nightMode) {
+      if (!this.nightmode) {
         this.hover = true;
       }
     }

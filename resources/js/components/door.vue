@@ -16,11 +16,11 @@ export default {
     };
   },
   props: {
-    nightMode: { type: Boolean }
+    nightmode: { type: Boolean }
   },
   methods: {
     addOrder() {
-      if (!this.nightMode) {
+      if (!this.nightmode) {
         fetch("api/order", {
           method: "post",
           body: JSON.stringify(this.order),

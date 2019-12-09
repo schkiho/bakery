@@ -2,19 +2,19 @@
   <div class="house">
     <div class="container frontage w-100 h-100">
       <div class="left d-flex justify-content-center">
-        <window :nightMode="nightMode" />
+        <window :nightmode="nightmode" />
       </div>
       <div class="middl-up d-flex justify-content-center">
         <sign />
       </div>
       <div class="middle-down d-flex justify-content-center align-items-end">
-        <door :nightMode="nightMode" />
+        <door :nightmode="nightmode" />
       </div>
       <div class="right-up d-flex justify-content-center">
-        <window :nightMode="nightMode" />
+        <window :nightmode="nightmode" />
       </div>
       <div class="right-down d-flex justify-content-center align-items-center">
-        <mailbox :nightMode="nightMode" />
+        <mailbox :nightmode="nightmode" />
       </div>
     </div>
   </div>
@@ -29,7 +29,7 @@ import mailbox from "./mailbox";
 export default {
   name: "house",
   props: {
-    nightMode: { type: Boolean }
+    nightmode: { type: Boolean }
   },
   components: {
     window,

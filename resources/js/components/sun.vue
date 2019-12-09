@@ -1,5 +1,5 @@
 <template>
-  <div @click="switchMode" class="sun"></div>
+  <div @click="switchMode()" :nightmode="this.nightmode" class="sun"></div>
 </template>
 
 <script>
@@ -7,20 +7,16 @@ export default {
   name: "sun",
   data() {
     return {
-      dayMode: false
+      nightmode: false
     };
-  },
-  props: {
-    nightMode: { type: Boolean }
   },
 
   methods: {
     switchMode() {
-      this.$emit("clicked", this.dayMode);
+      this.nightmode = !this.nightmode;
+      this.$emit("changeSunMode", this.nightmode);
+      return this.nightmode;
     }
-  },
-  beforeMount() {
-    this.dayMode = !this.nightMode;
   }
 };
 </script>

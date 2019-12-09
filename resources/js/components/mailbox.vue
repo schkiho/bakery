@@ -1,6 +1,6 @@
 <template>
   <div
-    v-bind:class="[{disabled: nightMode},{ active: fallDown }]"
+    v-bind:class="[{ active: fallDown }]"
     @click="inactive"
     class="mailbox d-flex justify-content-center rounded"
   >
@@ -20,11 +20,11 @@ export default {
     };
   },
   props: {
-    nightMode: { type: Boolean }
+    nightmode: { type: Boolean }
   },
   methods: {
     inactive() {
-      if (!this.nightMode) {
+      if (!this.nightmode) {
         this.fallDown = true;
       }
     }
